@@ -19,7 +19,7 @@ class _HomeViewState extends HomeController {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.all(0.0),
-          children: const [
+          children:  [
             UserAccountsDrawerHeader(
                 accountName: Text('Valerius Iman'),
                 accountEmail: Text('valeriusimansupriyatno@gmail.com')),
@@ -28,6 +28,13 @@ class _HomeViewState extends HomeController {
               leading: CircleAvatar(
                 child: Icon(Icons.apps),
               ),
+            ),
+            ListTile(
+              title: Text('Kategori'),
+              leading: CircleAvatar(
+                child: Icon(Icons.account_tree),
+              ),
+              onTap: () => Navigator.of(context).pushNamed('/kategori'),
             ),
             ListTile(
               title: Text('Register'),
